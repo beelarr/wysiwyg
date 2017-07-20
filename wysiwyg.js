@@ -54,4 +54,11 @@ person.forEach((e)=>{
     })
 });
 
+let input = document.querySelector('input')
+person.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        input.focus()
+    })
+});
+
 
