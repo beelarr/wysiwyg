@@ -16,12 +16,12 @@
     margin-bottom: 1.2%;
 }
 
-.even {
+person:nth-child(even) {
     background-color: lightyellow;
 
 }
 
-.odd {
+person:nth-child(odd) {
     background-color: lightblue;
 }
 

@@ -21,18 +21,30 @@ let famous_folks = [{
 }
 ];
 
+// famous_folks.forEach((item, index) =>{
+//    let iter_of_item = `<div id='${index}'>${item.title} aka ${item.name} </div> `
+//    let title = document.createElement('div');
+//    title.innerHTML = iter_of_item;
+//    document.querySelector('card').appendChild
+// });
 
 
 
 
 
 
-for (let item of famous_folks){
-    document.querySelector('#card').innerHTML += `<h3>${item.title} aka ${item.name}</h3>`;
-    document.querySelector('#card').innerHTML += `<h4>${item.bio}<img src="${item.image}"></h4>`;
-    document.querySelector('#card').innerHTML += `<h4>Born in ${item.lifespan.birth}</h4><div>Died in ${item.lifespan.death}</div>`
+famous_folks.forEach((item, index) =>{
+    let content_block = `<person class="person--${index+1}"><header>${item.title} aka ${item.name}</header>
+    <section>${item.bio}<img src="${item.image}"></section><footer>Born in ${item.lifespan.birth}.  Died in ${item.lifespan.death}</footer>
+    </person>`;
 
-    }
+    let card_div = document.querySelector('#container');
+    card_div.innerHTML += content_block;
+
+    // document.querySelector('#container').appendChild(card_div);
+    // let content_dom = document.querySelector('#person--${index}');
+
+});
 
 
 
