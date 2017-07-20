@@ -46,5 +46,12 @@ famous_folks.forEach((item, index) =>{
 
 });
 
+let person = document.querySelectorAll('person');
+console.log(person)
+person.forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        e.classList.toggle('dotted')
+    })
+});
 
 

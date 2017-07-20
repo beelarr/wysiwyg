@@ -26,5 +26,5 @@ person:nth-child(odd) {
 }
 
 .dotted {
-    border 3px black dotted;
+    border: 3px black dotted;
 }
